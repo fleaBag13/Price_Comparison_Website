@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- style.css  -->
+    <link rel="stylesheet" href="homeStyle.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>BudgetBuy</title>
+    <!-- <img src="logo3.PNG" class="rounded mx-auto d-block" width = "400px" alt="..."> -->
+
+    <style>
+        body {
+            background-color: white;
+            background-image: url("rev2.jpg");
+            background-size: cover;
+            filter: grayscale(50%);
+        }
+
+        .topb:hover {
+          background-color: #99f0bd
+        }
+
+        .header_menu {
+          background-color: #a9c9b2;
+        }
+
+        .navbar-nav > li{
+          padding-left:20px;
+          padding-right:20px;
+        }
+
+        .btn-primary {
+          background-color: green;
+        }
+
+        #rev1 {
+          margin-top: 100px;
+          margin-bottom:90px;
+          width: 1000px;
+          margin-left: 200px;
+        }
+
+        .rev {
+          margin-bottom: 50px;
+          width: 1000px;
+          margin-left: 160px;
+        }
+
+        .cbtn {
+          margin-top: 20px;
+        }
+
+        .card-text {
+          margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header for the page  -->
+
+    <div class="backg">
+        <section class="header_menu" id="header_menu">
+            <div class="container-fluid px-0 shadow">
+                <nav class="navbar navbar-expand-lg navbar-light py-3 ">
+                    <!-- <a class="navbar-brand pl-5 text-white" href="javascript:;">
+                        <img src="logo1.PNG" class="img img-fluid" width="100px" alt="logo">
+                    </a> -->
+                    <!-- <button id="dropdown" class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="dropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> -->
+
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-size:30px;">
+      <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      BudgetBuy
+    </a>
+  </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+                        <ul class="navbar-nav mr-auto" style="max-height: 100px;">
+                            <li class="nav-item active">
+                                <a class="nav-link text-dark grey " style="font-size: 25px;" href="{% url 'index' %}"> Home <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-dark grey " style="font-size: 25px;" href="{% url 'feature' %}">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark grey " style="font-size: 25px;" href="{% url 'compare' %}">Compare</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+          </section>
+
+{% block content %}
+
+  <div class="card mb-3" id="rev1" style="max-width: 800px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'img/Oneplus7.jpg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">ONE PLUS 7</h5>
+        {% for rs in res4 %}
+      <ul class="list-group">
+      <li class="list-group"><h5 class="card-title">{{ rs }}</h5></li>
+    </ul>
+    {% endfor %}
+        <p class="card-text"><i class="fa-solid fa-cart-shopping"></i><a href="https://vlebazaar.in/OnePlus-7-Mirror-Grey-8GB-RAM-256GB?gclid=CjwKCAjw9e6SBhB2EiwA5myr9kLkisB8U_7-yGhgth6Sd6soFXix5HC8o7NTIrZRHLmEDfWxhniLGRoCFocQAvD_BwE"> VLE Bazaar</a></p>
+      <p class="card-text"><i class="fa-solid fa-cart-shopping"></i><a href="https://sutribomb.com/product/oneplus-7-mobile-phone-256-gb-8-gb-ram-red/"> SutriBomb</a></p>
+      <p class="card-text"><i class="fa-solid fa-cart-shopping"></i><a href="https://www.kuchbhilo.in/product/oneplus-7-mobile-phone-256-gb-8-gb-ram-red/?gclid=CjwKCAjw9e6SBhB2EiwA5myr9v3n6aewy5L9sASt2jNUQseMJKUdR7rvQ-O8AN_8Dsj5AuQSHrEx1RoCvvwQAvD_BwE"> Kuchbhilo</a></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+<section class="footer_section pt-5 pb-2" id="footer_section">
+              <footer>
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-3 col-6 pl-5 pl-small-15">
+                              <div class="footer_title">
+                                  <a href="https://www.instagram.com/offthemap673?r=nametag"><img src="logo1.PNG" width="150px" class="img img-fluid"
+                                          alt="logo"></a>
+                              </div>
+                              <div class="connect mt-2">
+                                  <h3 class="text-capitalize">Connect With Us!</h3>
+                                  <i class="fab fa-instagram fa-3x px-3"></i>
+                                  <i class="fab fa-facebook fa-3x px-2"></i>
+                                  <i class="fab fa-pinterest fa-3x px-3"></i>
+                              </div>
+                          </div>
+                          <div class="col-md-3 col-6">
+                              <div class="footer_title pt-3 mb-3">
+                                  <h3>Support</h3>
+                              </div>
+                              <div class="footer_links">
+                                  <ul>
+                                      <li><a href="about.php" style="color: mediumblue;">About</a></li>
+                                      <li><a href="contact.php" style="color: mediumblue;">Contact Us</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+                  <div class="border-top">
+                      <h6 class="text-center mt-3">Copyright ©2022 All rights reserved
+                      </h6>
+                  </div>
+              </footer>
+            </section>
+
+          <!-- Back to Top -->
+          <div class="backtop">
+              <a id="button topb" href="#top" class="btn btn-lg btn-outline-danger" role="button" style="background-color:azure;">
+                  <i class="fas fa-chevron-up text-dark"></i>
+              </a>
+          </div>
+
+
+  </body>
+
+  </html>

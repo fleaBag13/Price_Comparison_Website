@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  {%  load static %}
+<head>
+<title>Comapre-BB</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarCenteredExample"
+      aria-controls="navbarCenteredExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarCenteredExample"
+    >
+      <!-- Left links -->
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+        </li> 
+        </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+
+</nav>
+<section id="phone">
+  <div class="my-6">
+  <div class ="py-5">
+    </div>
+<div class="container fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+      <div class="card" >
+    <img class="card-img-top" src="{% static 'img/Oneplus7.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">ONE PLUS 7</h5>
+      <p class="card-text"></p>
+      <a  href="{% url 'Oneplus7' %}" class="btn btn-info">FEATURES</a>
+    </div>
+  </div>
+  </div>
+  
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card" >
+    <img class="card-img-top" src="{% static 'img/oneplus8.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">ONE PLUS 8T</h5>
+      <p class="card-text"> </p>
+      <a  href="{% url 'oneplus8t' %}" class="btn btn-info">FEATURES</a>
+    </div>
+  </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card" >
+    <img class="card-img-top" src="{% static 'img/OP9RT.jpg' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">ONE PLUS 9RT</h5>
+      <p class="card-text"></p>
+      <a  href="{% url 'oneplus9rt' %}" class="btn btn-info">FEATURES</a>
+    </div>
+  </div>
+  </div>
+
+    <div class ="py-5">
+    <div class="container fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+        <div class="card" >
+      <img class="card-img-top" src="{% static 'img/OPNORD2.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">ONE PLUS NORD CE 2</h5>
+        <p class="card-text"></p>
+        <a  href="{% url 'oneplusnord' %}" class="btn btn-info">FEATURES</a>
+      </div>
+    </div>
+    </div>
+    
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card" >
+      <img class="card-img-top" src="{% static 'img/RealmeC35.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">REALME C35</h5>
+        <p class="card-text"></p>
+        <a href="{% url 'Realmec35' %}" class="btn btn-info">FEATURES</a>
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card" >
+      <img class="card-img-top" src="{% static 'img/REALMEGT.jpg' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">REALME GT NEO 2</h5>
+        <p class="card-text"></p>
+        <p class="card-text"></p>
+        <a href="{% url 'realmegt' %}" class="btn btn-info">FEATURES</a>
+      </div>
+    </div>
+    </div>
+  
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
